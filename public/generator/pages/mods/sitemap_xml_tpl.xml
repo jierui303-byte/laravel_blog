@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="%GEN_URL%pages/mods/sitemap.xsl"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"<TIF TYPE1>
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"</TIF><TIF TYPE2>
+      xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"</TIF><TIF TYPE3>
+      xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"</TIF><TIF TYPE4>
+      xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"</TIF>
+      xsi:schemaLocation="
+            http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Standalone Sitemap Generator www.xml-sitemaps.com -->
+%URLS_LIST_FROM%
+  <url>
+       <loc><TVAR URL></loc><TIF TYPE0><TIF ALTLANG><TLOOP ALTLANG>
+       <xhtml:link rel="alternate" <TIF t><TVAR t>="<TVAR l>"</TIF> href="<TVAR u>" /></TLOOP></TIF></TIF><TIF ismob>
+       <mobile:mobile/><TELSE><TIF LASTMOD>
+       <lastmod><TVAR LASTMOD></lastmod></TIF><TIF PERIOD>
+       <changefreq><TVAR PERIOD></changefreq></TIF><TIF PRIORITY>
+       <priority><TVAR PRIORITY></priority></TIF></TIF><TIF imgs><TLOOP imgs>
+       <image:image>
+         <image:loc><TVAR iurl></image:loc><TIF caption>
+         <image:caption><TVAR caption></image:caption></TIF>
+       </image:image></TLOOP></TIF><TIF videos><TLOOP videos>
+       <video:video>
+         <TIF thumb><video:thumbnail_loc><TVAR thumb></video:thumbnail_loc> 
+         </TIF><video:title><TVAR title></video:title>
+         <video:description><TVAR desc></video:description><TIF pubdate>
+         <video:publication_date><TVAR pubdate></video:publication_date></TIF><TIF contentloc>
+         <video:content_loc><TVAR contentloc></video:content_loc></TIF><TIF playerloc>
+         <video:player_loc allow_embed="yes" autoplay="ap=1"><TVAR playerloc></video:player_loc></TIF><TIF dur>
+         <video:duration><TVAR dur></video:duration></TIF>
+       </video:video></TLOOP></TIF><TIF TYPE3>
+       <news:news>
+         <news:publication>
+           <news:name><TVAR N_NAME></news:name>
+           <news:language><TVAR N_LANG></news:language>
+         </news:publication>
+         <news:publication_date><TVAR N_DATE></news:publication_date>
+         <news:title><TVAR TITLE></news:title>
+       </news:news></TIF>
+  </url>%URLS_LIST_TO%
+</urlset>

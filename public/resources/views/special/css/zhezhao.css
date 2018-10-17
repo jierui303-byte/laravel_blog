@@ -1,0 +1,31 @@
+.zhezhao{
+    width:305px;
+    height:417px;
+    margin:0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.zhezhao>div{
+    display:none;
+    background: greenyellow;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+.zhezhao>div>p{
+    transform: translate(305px);
+    transition:all 1s;
+}
+.zhezhao:hover>div{
+    display:block;
+    color:red;
+    font-size: 25px;
+    line-height: 417px;
+    text-align: center;
+    opacity: .5;
+}
+.zhezhao>div:hover>p{
+    transform: translate(0);
+}

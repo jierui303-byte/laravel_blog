@@ -1,0 +1,25 @@
+.main>.left>.recommend{width:100%;position: relative;}
+.main>.left>.recommend>h1{color:black;font-size: 26px;font-weight: 800;padding-top: 30px;box-sizing: border-box;border-bottom: 1px solid #000;}
+.main>.left>.recommend>h1>span{display:block;width:208px;}
+.main>.left>.recommend>h1>span::after{content:'';display:block;width:104px;height:5px;background:#000;margin-top: 5px;}
+
+
+.main>.left>.intro{width:100%;}
+.main>.left img{width:100%;margin: 20px 0;}
+.main>.left>.intro>h1,.main>.left>.research>h1,.main>.left>.teac>h1,.main>.left>.sch>h1{width:100%;height:39px;margin-top:76px;text-indent:2em;line-height:39px;background:url("../images/8.png") no-repeat 0 0;color:#fff;font-size: 25px;font-weight: 600;letter-spacing: 3px;}
+
+.main>.left>.intro>h1~p,.main>.left>.research>h1~p{text-indent: 2em;line-height: 29px;letter-spacing:2px;font-size: 10px;}
+
+.main .left>.teac{overflow: hidden;}
+.main .left>.teac>.teacher{border:1px dashed #8f8888;height:260px;width:47%;margin:5% 1%;float:left;}
+.main .left>.teac>.teacher>img{float:left;margin-top: 9%;margin-left: 1%;width:40%;}
+.main .left>.teac>.teacher>div{float: right;padding:2%;width:53%;margin-top:23%;}
+.main .left>.teac>.teacher>div>h1:nth-of-type(2){font-size:10px;color:#000;border-bottom:1px solid #000;}
+
+.main .left>.teac>.teacher>div>p{font-size: 7px;color:#000;padding-top: 10px;line-height: 20px;text-indent: 2em;}
+
+
+.main>.left>.sch{width:100%;}
+.main>.left>.sch>h3{width:100%;color:#000;font-size:12px;border-bottom: 1px solid #8f8888;margin-top:25px;padding-bottom: 5px;box-sizing: border-box;text-indent: 5px;letter-spacing: 5px;}
+.main>.left>.sch>ul{padding-left: 20px;padding-top: 10px;}
+.main>.left>.sch>ul>li{background:url("../images/xing.png") no-repeat 0 10px;text-indent: 30px;height:30px;line-height: 30px;}

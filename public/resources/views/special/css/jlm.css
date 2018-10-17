@@ -1,0 +1,33 @@
+.jlm{
+    width:1000px;
+    height:200px;
+    margin:0 auto;
+}
+.jlm>.wrap{
+    width:800px;
+    height:101px;
+    margin: 0 auto;
+    background: url("../jlm/menu-bg.jpg") no-repeat;
+}
+.jlm>.wrap>ul{
+    width:800px;
+    height:101px;
+    list-style: none;
+    padding:0;
+}
+.jlm>.wrap>ul li{
+    width:200px;
+    height:101px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.jlm>.wrap>ul li img{
+    position: absolute;
+    top:0;
+    transition:all .8s;
+}
+.jlm>.wrap>ul li:hover>img:nth-child(1){
+    top:-101px;
+}
+

@@ -1,0 +1,288 @@
+
+ChangeLog for PHP XML Sitemap generator
+
+http://www.xml-sitemaps.com
+----------------------------------------------
+
+2016-03-19 v7.2
+
+   * new feature: JSON-LD data structure support for video sitemaps
+   * new feature: Images sitemap supports srcset attribute with multiple images
+   * update: PHP7 compatibility
+   * update: using new Vimeo API
+
+2015-05-19 v7.1
+
+   * new feature: parsing and following common javascript links
+   * update: using new Youtube API v3
+   * new feature: Youtube playlists support
+
+
+2014-12-14 v7.0
+
+   * new feature: referring pages list tracking
+   * new feature: alternative language URLs (hreflang) included in sitemap
+   * new feature: "noindex, follow" crawler configuration option
+   * new feature: automatically slow down/delay crawling in case of server overloading
+   * update: auto-detect last-modified, changefreq, revisit-after meta tags
+   * update: custom Accept-Language http header
+   * update: option to disable regular XML sitemap
+   * update: caching for video API requests
+   * update: HTML sitemap is now mobile-friendly
+
+
+2013-11-19 v6.1
+
+   * new feature: include subdomains in sitemap
+   * new feature: additional "Starting URLs" setting
+   * new feature: monitor crawler window and automaticall resume if it stops
+   * update: mobile pages inclusion mask
+   * update: create both compressed and uncompressed sitemap at the same time
+   * update: external links tracking exclusion option
+   * update: optionally disable robots.txt support
+
+
+2012-05-23 v6.0
+
+   * new feature: RSS feed add-on module implemented
+   * new feature: ajax crawlable content is supported
+   * update: memory usage optimized
+   * update: including images from external domains is now supported (optionally)
+   * update: new video sources supported: Blip.tv, Coull
+   * update: split mobile sitemap on multiple files
+   * update: notification email content moved to a template so that you can customize it
+   * update: search engines ping is sent only if sitemap has been changed
+
+
+2011-01-25 v5.0
+
+   * new feature: Video Sitemap support - a separate sitemap with details on embedded videos for your site
+   * new feature: News Sitemaps are now supported - new URLs found by generator and included in this sitemap
+   * new feature: new pages on your site get higher priority attribute in sitemap
+   * update: Images sitemaps improved - stored in separate file, with own inclusion mask, displayed in browser
+   * update: generator now splits xml sitemap not only based on the number of URLs but by a file size too
+
+
+2010-05-20 v4.0
+
+   * new feature: include images information in sitemap
+   * new feature: automatically resuming of generator when crawling stops
+   * new feature: XSLT stylesheet is applied to all xml sitemaps
+   * new feature: embedded check for new versions of sitemap generator
+   * update: new sorting and restructuring options for HTML sitemap formatting
+   * update: canonical URLs meta tags are supported
+   * update: multiple source pages can be tracked for broken links list
+   * update: option to extract last-modification date/time for "Not parsed" links
+
+
+2009-05-19 v3.0
+
+   * new sitemap type: Mobile Sitemaps are now supported
+   * new feature: noise content exclusion presets supported (X-Cart, osCommerce, vBulletin and others)
+   * new feature: track the list of all links pointing to external sites
+   * new feature: weblogupdate: notification can be optionally sent to services like Technorati
+   * new feature: configuration files converted to xml and data folder protected for better security
+   * new feature: automatically remove old log records
+   * new option added: "Parse Only URLs"
+   * update: HTTPS sites are supported now (openSSL support is required)
+   * update: gzip content-encoding via http supported
+   * update: multiple entries allowed in "Include Only Option"
+   * fix: sitemap links in email notifications
+
+
+2008-06-15 v2.9
+
+   * automatic email notifications sent every time sitemap is generated
+   * html sitemap customization: date format selection (xs_dateformat), order folders by name (xs_htmlnameorder)
+   * http/1.1 protocol supported
+   * memory usage optimized, new option to define memory limit
+   * option to allow pages with http response code different from 200 to be included in sitemap (xs_allow_httpcode)
+   * minor bug fixes
+
+
+
+2007-12-27 v2.8
+
+   * Live.com ping
+   * meta description tag can be (optionally) extracted and inserted in ROR sitemap (advanced settings section)
+   * Clear session (or others) parameters from URLs (advanced settings section)
+   * IP address connection can be defined (advanced settings section)
+   * Progress storage type: "serialize" or "var_export"
+   * Changelog order can be changed in config file (xs_chlogorder option)
+
+
+2007-10-21 v2.7
+
+   * xml sitemap is now template based, which allows to integrate xsl stylesheet into your sitemap. Templates are defined in: sitemap_index_tpl.xml, sitemap_xml_tpl.xml and sitemap_ror_tpl.xml files
+   * priority attribute can be assigned automatically by sitemap generator script now, just enable corresponding checkbox in configuration. Priority is descending with depth level: the highest priority is assigned to your homepage and the lower values are set for other pages, depending on how many "clicks" it takes to reach the page
+   * minor bug fixes and improvements
+   
+   
+2007-07-30 v2.6
+
+	* sitemap ping for Ask.com and Moreover.com (Live Search)
+	* memory usage optimized
+
+
+2007-05-19 v2.5.3
+
+	* titles are included in ROR sitemap now
+	* minor bug fixes and improvements
+
+
+2007-01-18 v2.5.2
+
+	* minor bug fixes and improvements
+
+
+2006-11-25 v2.5.1
+
+	* sitemap protocol v0.9 is supported now
+
+
+2006-11-24 v2.5
+
+	* google sitemap ping URL has been updated
+	* an option to automatically remove certain parameters from URLs has been implemented
+	* user-agent can be customized now with xs_crawl_ident option in config file
+	* robots.txt compliance can be turned on/off now with xs_robotstxt option in config file
+	* regular expressions are allowed in "Individual parameters" option - just add a leading '$' sign in the line to enable it
+
+
+2006-10-11 v2.4
+
+	* yahoo auto notification option added
+	* html sitemap is now fully customizable
+	* minor bug fixes and improvements
+
+
+2006-08-18 v2.3
+
+	* ROR sitemaps are now supported
+	* you can specify custom port for http connections now using xs_portconnection option in config.inc.php file
+	* an option added to limit crawl depth level
+
+
+2006-07-04 v2.2
+
+	* the <meta name="robots" content="noindex, nofollow"> tag is supported now
+	* xml sitemap size (max number of URLs per file) can be specified in config file 
+	* location of text sitemap can be specified in config file
+	* non-standard ports are supported like example.com:8080
+	* minor bug fixes and improvements
+
+2006-03-28 v2.1.1
+
+	* minor bug fixes and improvements
+
+2006-02-21 v2.1
+
+    * html sitemap listing enhancements
+	* minor bug fixes
+
+2006-01-17 v2.0
+
+	* HTML Site map generation is now included into the script. You are able to define the number of links per page in html sitemap and customize the page layout using simple template file.
+	* Configuration screen interface improved
+	* Mutiple minor changes
+
+
+2005-11-14 v1.2
+
+	* new feature: "Individual attributes" setting at Configuration screen. It allows you to set 
+	  specific values for last modification time, frequency andpriority per page. 
+	  To use it, define specific frequency and priority attributes in the following format:
+	  "url substring,lastupdate YYYY-mm-dd,frequency,priority". 
+	* new feature: "Include ONLY URLs" setting. This setting is the opposite to "Exclude URLs". When 
+	  it is not empty, ONLY the urls that match the substring entered are included into sitemap.
+	* configuration page interface improved (parameters are included into two groups now: main parameters and optional settings)
+
+
+2005-10-27 v1.1.3
+
+	* the generator creates a sitemap in TEXT FORMAT for you (one URL per line). You can download it from the "Sitemap details" block at the left column of the page. This URLs list can be submitted to Yahoo! at http://submit.search.yahoo.com/free/request
+
+
+2005-09-14 v1.1.2
+
+	* (fix) asp sites crawling problem
+
+
+2005-08-30 v1.1.1
+
+	* "sleep" delays are now available to configure to reduce the load on your server
+	* new configuration directive: "Do not parse URLs" allows to skip fetching some pages to boost
+	  the speed of sitemap generation of the large sites
+	* single quoted <base> tag
+
+
+2005-08-08 v1.1.0
+
+	* "resume the interrupted session" feature added
+	* urls extraction has been improved (some uncatched urls are now processed)
+	* performance/memory usage optimization
+
+
+2005-07-31 v1.08
+
+	* generator pages access can be restricted
+	* minor improvements
+
+
+2005-07-20 v1.07
+
+	* CRLF problem with sitemaps (that may lead to a parse problem in rare cases) fixed
+	* script configuration auto-filled with initial values	
+	* robots.txt is now processed both from top level and from the starting URL directory
+
+
+2005-07-14 v1.06
+
+	* support of (') character in URLs
+
+
+2005-07-14 v1.05
+
+	* "Content-type" header is checked and only "text/html" entries are processed
+	* "extensions" config settings trailing space problem fixed
+	* "gz" added to default excluded extensions
+	* "change_frequency" setting fix
+	* skip redirections to non-html files 
+	* interface enhacements
+
+
+2005-07-07 v1.04
+
+	* full config with initial settings included
+
+
+2005-07-07 v1.03
+
+	* "custom lastmod time" bug fixed
+	* all pages exluded when "exclude extensions" field is empty
+
+
+2005-07-05 v1.02
+
+	* robots.txt protocol is supported ('*' and 'googlebot' user-agents are checked)
+	* view current process state when crawler is in background mode
+	* interrupt the crawler in background mode
+	* show real current path on the configuration page
+	* show sitemap summary block at the main (configuration) page
+	* check if sitemap exists on the analyze page to avoid warning messages
+	* split sitemaps on part per 49,999 URLs for consistency (instead of 50,000)
+	* redirections to external domains are not followed anymore
+
+
+2005-07-04 v1.01
+
+	* run-in-background option
+	* minor bug-fixes
+
+
+2005-07-03 v1.0
+
+	Initial Release
+
+----------------------------------------------
+http://www.xml-sitemaps.com

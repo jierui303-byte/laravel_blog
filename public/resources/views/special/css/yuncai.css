@@ -1,0 +1,55 @@
+.yuncai{
+    width:1200px;
+    height:600px;
+    animation:yuncai-run-color 50s ease-out infinite;
+    position: relative;
+}
+.yuncai>div:nth-child(1){
+    width:300%;
+    height:100%;
+    background:url("../yuncai/cloud_one.png");
+    animation:yuncai-run 30s ease-out infinite;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.yuncai>div:nth-child(2){
+    width:300%;
+    height:100%;
+    background:url("../yuncai/cloud_two.png");
+    animation:yuncai-run 35s linear infinite;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.yuncai>div:nth-child(3){
+    width:300%;
+    height:100%;
+    background:url("../yuncai/cloud_three.png");
+    animation:yuncai-run 80s linear infinite;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+@keyframes yuncai-run-color {
+    0%{
+        background:#BCFFFF;
+    }
+    50%{
+        background:blue;
+    }
+    100%{
+        background: #000000;
+    }
+}
+@keyframes yuncai-run {
+    0%{
+        top:0;
+        left:0;
+    }
+    100%{
+        top:300px;
+        left:-1477px;
+    }
+}

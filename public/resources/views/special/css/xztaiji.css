@@ -1,0 +1,19 @@
+.xztaiji{
+    width:600px;
+    height:500px;
+    margin:0 auto;
+}
+.xztaiji>div>img{
+    border-radius: 50%;
+    transform:rotate(0deg);
+    animation:xztaiji-run 1s linear infinite;
+}
+
+@keyframes xztaiji-run {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(-360deg);
+    }
+}

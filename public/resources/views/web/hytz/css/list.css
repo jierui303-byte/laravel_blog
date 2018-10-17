@@ -1,0 +1,16 @@
+/*列表页-left左侧样式表*/
+.main>h2{width:100%;border-bottom: 1px solid #8f8888;padding-bottom:10px;margin-bottom: 20px;color:#000000;font-size: 14px;}
+.main>.left{margin-top: -10px;}
+.main>.left>ul{width:100%;}
+.main>.left>ul>li{width:100%;background: #e8e8e8;overflow: hidden;height:193px;margin:10px 0;position: relative;}
+.main>.left>ul>li>a:nth-of-type(1){width:30%;float:left;display:block;height:100%;}
+.main>.left>ul>li>a:nth-of-type(1)>img{padding:35px 5px;}
+.main>.left>ul>li a:hover{text-decoration: none;}
+.main>.left>ul>li>div{width:69%;height:80%;float:right;}
+.main>.left>ul>li>div>h2{margin-top: 30px;}
+.main>.left>ul>li>div>h2>a{color:#969696;font-size: 16px;}
+.main>.left>ul>li>div>p:nth-of-type(1){font-size: 12px;margin: 10px 0;}
+.main>.left>ul>li>div>p:nth-of-type(1)>a{color:#2c2c2c;}
+.main>.left>ul>li>div>p:nth-of-type(2){font-size: 12px;}
+.main>.left>ul>li>div>p:nth-of-type(2)>a{color:#888888;}
+.main>.left>ul>li>a:nth-of-type(2){display:block;position:absolute;bottom:8px;right:8px;width:109px;height:32px;text-align:center;line-height:32px;background: #e70012;font-size: 16px;letter-spacing:2px;color:#fff;}

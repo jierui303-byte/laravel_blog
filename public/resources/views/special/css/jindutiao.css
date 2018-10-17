@@ -1,0 +1,30 @@
+.jindutiao{
+    width:600px;
+    height:100px;
+    margin:0 auto;
+}
+.jindutiao>div{
+    width:300px;
+    height:30px;
+    border: 1px solid #666666;
+    margin:0 auto;
+    overflow: hidden;
+}
+.jindutiao>div>div{
+    width:0;
+    height:100%;
+    animation:jindutiao-run 3s linear infinite;
+}
+
+@keyframes jindutiao-run {
+    0%{
+        width:0;
+        background: #ffffff;
+        transform:rotateX(0deg);
+    }
+    100%{
+        width:100%;
+        background: yellowgreen;
+        transform:rotateX(89deg);
+    }
+}

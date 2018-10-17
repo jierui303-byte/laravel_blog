@@ -1,0 +1,43 @@
+.xiaxue{
+    width:1000px;
+    height:500px;
+    margin:0 auto;
+}
+.xiaxue .wrap{
+    width:640px;
+    height:442px;
+    margin:0 auto;
+    background:#ffffff url("../xiaxue/2.jpg") no-repeat;
+    position:relative;
+    overflow: hidden;
+}
+.xiaxue .wrap div{
+    width:100%;
+    height:500%;
+    background:url("../xiaxue/snow.png");
+    position:absolute;
+    animation:xiaxue-run 3s linear infinite;
+}
+.xiaxue .wrap div:first-child{
+    animation:xiaxue-run 9s linear infinite;
+    opacity: .6;
+    transform:rotate(-10deg);
+}
+.xiaxue .wrap div:last-child{
+    animation:xiaxue-run 6s linear infinite;
+    opacity: .9;
+    transform:rotate(30deg);
+}
+@keyframes xiaxue-run{
+    0%{
+        top:-500px;
+    }
+    100%{
+        top:0;
+    }
+}
+
+
+
+
+

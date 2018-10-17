@@ -1,0 +1,120 @@
+/*导航*/
+.nav {
+    margin-top: 40px;
+}
+.navbar{height:8em;}
+.logo{width:11em;height:80px;position:relative;left:4%;top:16px;background: url("../img/yue-sprit001.png") no-repeat 0 0;display:block;}
+.logo h1{text-indent: -999px;}
+.logo+span{height:80px;line-height: 80px;position:relative;left:8%;top:16px;color:#2fb4e9;font-size: 1em;}
+.nav{height:80px;}
+.nav li{}
+.nav li a{height:30px;padding-top:5px;display:block;border-radius: 5px;}
+.nav li a:hover {background: #2fb4e9;}
+.navbar-default .navbar-nav>li>a:hover{background-color: #2fb4e9;  }
+
+.dl{border-left:1px solid #fe7009;}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    width: 70%;
+    /*background: red;*/
+    float: right;
+}
+/*导航*/
+
+
+/*search*/
+.searchhetong{color:#fff;font-size:16px;font-weight: 400;padding: 15px 0;}
+.searchhetong b{display:inline-block;text-align:center;background: #ed711f;color:#fff;width:20px;margin-right:5px;}
+#search{height:150px;background: url("../img/s_bg.jpg");}
+.inputsearch input{height:53px;}
+.inputsearch .input-group-addon{padding: 6px 41px;background: #fdd26d;color:#fff;font-size: 25px;}
+
+/*search*/
+
+
+/*热门合同*/
+#hot{height:210px;background: #f5f5f5;}
+#hot h3, #hotProduct h3{text-align: center;padding-top: 46px;color:#444444;font-weight: 100;}
+#hot a{display:block; width:120px;height:38px;line-height:38px;text-align:center;margin:50px auto 0 auto;border:1px solid #cccccc;border-radius: 5px;}
+/*热门合同*/
+
+
+/*热销产品*/
+#hotProduct .productlist{margin-top: 60px;margin-bottom: 42px;}
+#hotProduct .productlist div{margin-bottom: 5px;}
+#hotProduct .productlist a{border:1px solid #dddddd;display:block;padding:2px;height:306px;text-decoration: none;color:#fff;}
+#hotProduct .productlist a .row{color:#747474;font-size: 13px;text-align: center;}
+#hotProduct .productlist a .row h3{width:100%;padding-top:10px;font-size: 18px;}
+#hotProduct .productlist a .row p{}
+#hotProduct .productlist a .row p span{color:#fe7009;font-size: 15px;}
+#hotProduct .productlist .productbg{height:178px;padding-top:20px;background: #baa1e2;}
+#hotProduct .productlist .productbg .circle{width:100px;height:100px;margin:0 auto;border-radius: 50%;border:1px solid #fff;}
+#hotProduct .productlist .productbg>p{text-align: center;margin-top: 5px;}
+#hotProduct .productlist .productbg+p{text-align: center;margin-top: 5px;color:#e3cf7a;}
+#hotProduct .productlist .productbg .circle span{font-size: 30px;text-align: center;display: block;line-height: 100px;}
+#hotProduct .productlist>div:nth-of-type(2) .productbg{background: #f97b39;}
+#hotProduct .productlist>div:nth-of-type(3) .productbg{background: #97cb26;}
+#hotProduct .productlist>div:nth-of-type(4) .productbg{background: #fad716;}
+
+/*热销产品*/
+
+
+
+/*悦活动*/
+.yuehuodong{background: #f5f5f5;}
+.yuehuodongTop{padding-top: 42px;}
+.yuehuodongTop>.row{background: #fff;}
+#carousel-example-generic-small{height:100%;}
+.h2s h2{font-size: 21px;font-weight: 100;text-align: center;color:#225599;}
+.uls{list-style-type: none;padding:0;overflow: hidden}
+.uls li{height:45px;line-height:45px;border-bottom: 1px solid #e8e8e8;}
+.uls li:hover{border-right: 3px solid greenyellow;}
+.uls li a{display:block;height:45px;overflow: hidden;color:#000;}
+.uls li:hover a{text-decoration: none;}
+
+.fiveModel{margin:0 auto;}
+.fiveModel .row{margin-top: 42px;margin-bottom: 42px;}
+.fiveModel .row div{border-right:1px solid #dddddd;text-align: center;}
+.fiveModel .row div:nth-of-type(5){border-right:none;}
+
+
+/*悦活动*/
+
+
+/*100家企业的明智选择*/
+.xuanbg{background:url("../img/ent-bg.jpg") no-repeat;}
+.xuanze h3{width:100%;padding-top:30px;padding-bottom:20px;font-size: 18px;text-align: center;font-weight: 100;}
+.xuanze h3 span{color:#00AA88;font-weight: 600;}
+.xuanze .row{background: #fff;margin-bottom: 42px;}
+.xuanze .row div{border:1px solid #ddd;overflow: hidden;}
+.xuanze .row div img{width:100%;transition:all 1s;}
+.xuanze .row div:hover img{transform:scale(1.1,1.1);}
+/*100家企业的明智选择*/
+
+
+/*合作方*/
+.hezuo{}
+.hezuo h3{width:100%;padding-top:42px;padding-bottom:30px;font-size: 18px;text-align: center;font-weight: 100;}
+.hezuo .row{background: #fff;margin-bottom: 42px;}
+.hezuo .row div img{width:100%;transition:all 1s;}
+.hezuo .row div:hover img{transform:scale(1.1,1.1);}
+/*合作方*/
+
+
+footer{background: #efefef;}
+footer p{text-align: right;margin-top: 100px;}
+footer ul{list-style-type: none;padding:0;}
+footer h3{font-size: 20px;font-weight: 100;}
+footer a{color:#23527c;display:block;padding:5px;}
+footer a:hover{color:#2fb4e9;text-decoration: none;}
+
+
+@media (max-width: 990px){
+    .navbar-default .navbar-collapse, .navbar-default{
+        border-color: #e7e7e7;
+        background: rgba(255,255,250,.5);
+        z-index: 2;
+        position: relative;
+    }
+}

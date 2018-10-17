@@ -1,0 +1,12 @@
+.clear::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.fLeft {
+  float: left; }
+
+.fRight {
+  float: right; }
+
+/*# sourceMappingURL=func.css.map */

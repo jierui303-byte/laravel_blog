@@ -1,0 +1,46 @@
+.main>.left>.recommend{width:100%;position: relative;}
+.main>.left>.recommend>h1{color:black;font-size: 26px;font-weight: 800;padding-top: 30px;box-sizing: border-box;border-bottom: 1px solid #000;}
+.main>.left>.recommend>h1>span{display:block;width:104px;}
+.main>.left>.recommend>h1>span::after{content:'';display:block;width:100%;height:5px;background:#000;margin-top: 5px;}
+.main>.left>.recommend>p{padding:40px 20px;line-height: 30px;font-size: 12px;font-weight: 500;text-indent: 2em;font-family: "宋体";}
+
+
+
+
+/*讲座预告-相关新闻*/
+.main .left>.yugao{width:100%;overflow: hidden;}
+.main .left>.yugao>.models{float:left;width:49%;margin-top: 28px;}
+.main .left>.yugao>.models>h1{width:100%;height:36px;color:#fff;font-size:24px;text-indent:10px;letter-spacing:3px;font-weight:600;background:#e70012 url("../images/jt.png") no-repeat 124px 0;position: relative;}
+.main .left>.yugao>.models>h1>a{display: block;width:52px;height:15px;background:url("../images/more.png");position: absolute;top:10px;right:12px;}
+.main .left>.yugao>.models>ul{width:100%;margin-top: 15px;}
+.main .left>.yugao>.models>ul>li{width:100%;height:103px;padding: 5px 0;overflow: hidden;box-sizing: border-box;border:1px dashed #8f8888;margin-bottom:5px;}
+.main .left>.yugao>.models>ul>li>a{color:#000;}
+.main .left>.yugao>.models>ul>li>a:hover{text-decoration: none;color:#e70012;}
+.main .left>.yugao>.models>ul>li>a:first-child{float:left;width:40%;}
+.main .left>.yugao>.models>ul>li>a:first-child>img{opacity:.8;margin-top: 3px;width:100%;margin-left: 3%;}
+.main .left>.yugao>.models>ul>li:hover>a:first-child>img{transform: translateY(-2px);opacity: 1;}
+.main .left>.yugao>.models>ul>li>div{float:right;width:60%;padding-left:8px;box-sizing: border-box;}
+.main .left>.yugao>.models>ul>li>div>a{width:60%;color:#000;font-size: 12px;}
+.main .left>.yugao>.models>ul>li>div>a:hover{text-decoration: none;color:#e70012;}
+
+.main .left>.yugao>.discuss{float:right;width:49%;margin-top: 28px;}
+.main .left>.yugao>.discuss>h1{width:100%;height:36px;color:#fff;font-size:24px;text-indent:10px;letter-spacing:3px;font-weight:600;background:#e70012 url("../images/jt.png") no-repeat 124px 0;position: relative;}
+.main .left>.yugao>.discuss>h1>a{display: block;width:52px;height:15px;background:url("../images/more.png");position: absolute;top:10px;right:12px;}
+.main .left>.yugao>.discuss>ul{width:100%;margin-top: 15px;}
+.main .left>.yugao>.discuss>ul>li{width:100%;height:103px;padding: 5px 0;overflow: hidden;box-sizing: border-box;border:1px dashed #8f8888;margin-bottom: 5px;}
+.main .left>.yugao>.discuss>ul>li>a{color:#000;}
+.main .left>.yugao>.discuss>ul>li>a:hover{text-decoration: none;color:#e70012;}
+.main .left>.yugao>.discuss>ul>li>a:first-child{float:left;width:40%;}
+.main .left>.yugao>.discuss>ul>li>a:first-child>img{opacity: .8;width:100%;margin-top: 3px;margin-left: 3%;}
+.main .left>.yugao>.discuss>ul>li:hover>a:first-child>img{transform: translateY(-2px);opacity: 1;}
+.main .left>.yugao>.discuss>ul>li>a:last-child{float:right;width:60%;margin-top:3px;padding:8px;max-height:83px;overflow:hidden;box-sizing: border-box;}
+/*讲座预告-相关新闻*/
+
+
+
+.main .left>.yugao>.teacher{border:1px dashed #8f8888;height:260px;}
+.main .left>.yugao>.teacher>img{float:left;margin-top: 9%;margin-left: 1%;width:40%;}
+.main .left>.yugao>.teacher>div{float: right;padding:2%;width:53%;margin-top:23%;}
+.main .left>.yugao>.teacher>div>h1:nth-of-type(2){font-size:10px;color:#000;border-bottom:1px solid #000;}
+
+.main .left>.yugao>.teacher>div>p{font-size: 7px;color:#000;padding-top: 10px;line-height: 20px;text-indent: 2em;}

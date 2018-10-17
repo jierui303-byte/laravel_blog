@@ -1,0 +1,33 @@
+Standalone Sitemap Generator Report
+Hello,
+
+sitemap for your website has been updated.
+<TVAR URL>
+
+Sitemap details
+-------------------------
+Sitemap created on: <TVAR DATE>
+
+Processing time: <TVAR PROCTIME>s
+
+Pages indexed: <TVAR PAGESNO>
+Crawled pages size: <TVAR PAGESSIZE>Mb
+
+
+View Sitemaps
+-------------------------
+
+XML Sitemap
+<TVAR SM_XML>
+
+<TVAR SM_OTHERS>
+
+
+Broken Links
+-------------------------
+<TVAR BROKEN_LINKS>
+
+
+
+Thank you for using our Sitemap Generator
+https://www.xml-sitemaps.com

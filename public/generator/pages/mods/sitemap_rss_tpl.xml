@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>%FEED_TITLE% RSS Feed</title>
+	<link>%INIT_URL%</link>
+	<description>My Feed at %INIT_URL%</description>
+	<lastBuildDate>%BUILD_DATE%</lastBuildDate>
+	<pubDate>%BUILD_DATE%</pubDate>
+	<generator>https://www.xml-sitemaps.com/</generator>
+	<atom:link href="%SELF_URL%" rel="self" type="application/rss+xml" />
+%URLS_LIST_FROM%
+<item>
+	<title><TVAR TITLE></title> 
+	<link><TVAR URL></link> 
+	<description><TVAR DESC></description>
+	<pubDate><TVAR LASTMOD></pubDate>
+	<guid isPermaLink="false"><TVAR GUID></guid>
+</item>%URLS_LIST_TO%
+</channel>
+</rss>

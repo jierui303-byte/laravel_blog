@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="%GEN_URL%pages/mods/sitemap.xsl"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+<!-- created with Standalone Sitemap Generator www.xml-sitemaps.com -->
+%URLS_LIST_FROM%
+  <url>
+		<loc><TVAR URL></loc>
+		<mobile:mobile/>
+  </url>%URLS_LIST_TO%
+</urlset>

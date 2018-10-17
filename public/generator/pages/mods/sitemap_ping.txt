@@ -1,0 +1,2 @@
+http://www.google.com/webmasters/tools/ping?sitemap=
+http://www.bing.com/webmaster/ping.aspx?siteMap=

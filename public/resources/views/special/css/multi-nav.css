@@ -1,0 +1,81 @@
+.multinav{
+    height:250px;
+}
+.multi-nav{
+    width:1000px;
+    height:57px;
+    border-radius:5px 5px 5px 5px;
+    background: #999;
+    margin:0 auto;
+}
+
+/*一级导航*/
+.multi-nav>ul{
+    list-style-type: none;
+}
+.multi-nav>ul>li:nth-child(1){
+    background:#d1d1d1;
+}
+.multi-nav>ul>li{
+    float:left;
+    width:100px;
+    height:39px;
+    margin:10px 13px;
+    text-align: center;
+    line-height: 39px;
+    color:#fff;
+    border-radius: 5px;
+}
+.multi-nav>ul>li:hover{
+    background:#d1d1d1;
+}
+.multi-nav>ul>li:hover>ul{
+    display:block;
+    top:40px;
+}
+
+
+/*二级导航*/
+.multi-nav>ul>li>ul{
+    padding:0;
+    margin-top:1px;
+    width:150px;
+    background: #efefef;
+    list-style-type: none;
+    display: none;
+    border-radius:5%;
+}
+.multi-nav>ul>li>ul>li{
+    margin:0;
+    padding-left:40px;
+    text-align: left;
+    color:#666666;
+    position: relative;
+}
+.multi-nav>ul>li>ul>li:hover{
+    background: #999;
+}
+
+
+/*三级导航*/
+.multi-nav>ul>li>ul>li>ul{
+    list-style-type: none;
+    position:absolute;
+    top:0;
+    left:150px;
+    width:150px;
+    display:none;
+    background: black;
+    padding:0;
+}
+.multi-nav>ul>li>ul>li>ul>li{
+    padding-left:40px;
+    color:#fff;
+}
+.multi-nav>ul>li>ul>li>ul>li:hover{
+    background:#fff;
+    color:black;
+}
+.multi-nav>ul>li>ul>li:hover>ul{
+    display:block;
+}

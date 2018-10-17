@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>XML Sitemaps Generator - Standalone version</title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="pages/style.css" />
+<meta name="robots" content="noindex,nofollow" /> 
+</head>
+<body>
+<div align="center">
+<h1>Standalone XML Sitemap Generator</h1>
+<div id="menu">
+<ul id="nav">
+<li><a href="index.php?op=config">Configuration</a></li>
+<li><a href="index.php?op=crawl">Crawling</a></li>
+<li><a href="index.php?op=view">View Sitemap</a></li>
+<li><a href="index.php?op=analyze">Analyze</a></li>
+<li><a href="index.php?op=chlog">ChangeLog</a></li>
+<li><a href="index.php?op=l404">Broken Links</a></li>
+<li><a class="navact" href="documentation.html">Documentation</a></li>
+</ul>
+</div>
+<div id="outerdiv">
+
+<!-- PHP XML generator documentation starts here -->
+<div id="sidenote">
+<div class="block1head">
+Generator help
+</div>
+<div class="block1">
+<ol>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#sysreq">Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#cfgtips">Configuration tips</a></li>
+<li><a href="#usage">Usage</a></li>
+</ol>
+
+<br /><a href="http://www.google.com/webmasters/sitemaps/docs/en/about.html"><b>About Google Sitemaps</b></a>
+
+</div>
+</div>
+
+
+<div id="shifted">
+
+<a name="intro"></a>
+<h2>1. Introduction</h2>
+
+<ul>
+<li><a href="http://www.xml-sitemaps.com/documentation-xml-sitemap-generator.html">Online documentation for Standalone Sitemap Generator</a>
+<li><a href="http://www.xml-sitemaps.com/howto-install.html">Online Step-By-Step Installation Guide</a>
+<li><a href="http://www.xml-sitemaps.com/xml-sitemaps-installation-guide.pdf">PDF version of Installation Guide</a>
+</ul>
+
+<a name="sysreq"></a>
+<h2>1. Requirements</h2>
+
+<ul>
+<li>The PHP XML generator will work with PHP 4.3.x or higher in default configuration
+in Apache web-server environment.
+<li>Sitemap generator connects to your website via http port 80, so your host should allow local network connections for php scripts (this is default configuration)
+<li>For file permissions requirements please refer to "Installation" section.
+<li>The memory size requirements (as well as the time required to complete sitemap generation) depends on the number of pages your website contains. 
+</ul>
+
+
+<a name="installation"></a>
+<h2>2. Installation</h2>
+
+<div class="inpcont">
+<ol>
+<li>Unpack the contents of distribution archive to the target folder on your server.
+<li>Make sure to set the following files permissions:
+	<ul>
+	<li><b>data/</b> folder - 0777 (rwxrwxrwx)
+	<li><b>/path/to/your/sitemap.xml</b> - 0666 (rw-rw-rw-) <a href="#cfgtips">see below (3.14)</a>
+	</ul>
+<li>If you want the sitemap to be build periodically (daily, weekly etc) you should setup
+the cron job to run the script using your hosting Control Panel.
+The command to use for cron job is shown on the 
+<b>"Crawling"</b> page.
+</ol>
+</div>
+
+<h2>2.1 Upgrade</h2>
+
+<div class="inpcont">
+If you have previous version of Sitemap Generator already installed, the following steps are required:
+<ol>
+<li>Unpack the contents of distribution archive and upload the following files to the target folder on your server:
+	<ul>
+	<li><b>index.php</b>
+	<li>all <b>pages/*</b> files
+	</ul>
+</ol>
+</div>
+
+<a name="cfgtips"></a>
+<h2>3. Configuration tips</h2>
+<ol>
+<li>Use the full url of your site for the "Starting URL" option. The crawler will explore only the URLs
+<b>within the starting directory</b>, i.e. when starting URL is "http://www.example.com/path/index.html",
+the "http://www.example.com/path/sub/page.html" <b>will be</b> indexed, but
+"http://www.example.com/other/index.html" <b>will NOT</b>.
+
+<li>"Save sitemap to" - is the filename in the "public_html/" folder of your website. This file
+should be <b>writable</b> by the script. To make sure it is, create this file and set
+its permissions to 0666.
+
+
+<li>It is recommended to use "Server's response" for "Last modification" field. In this case
+the entries for static pages will be filled with their real last modification time, while
+for dynamic pages the current time is used.
+
+<li>"Do not parse" input field contains file types, separated by space. These files
+<b>will be</b> added to the sitemap, but not fetched to save bandwidth, because they are
+not html files and have no embedded links. Please make sure these files are indexed by Google
+since there is no sense in adding them to sitemap otherwise!
+
+<li>"Do not parse URLs" works together with the option above to increase the speed of sitemap generation.
+If you are sure that some pages at your site do not contain the <b>unique</b> links to other pages,
+you can tell generator not to fetch them. 
+<br/>For instance, if your site has "view article" pages with urls like "viewarticle.php?..", you
+may want to add them here, because most likely all links inside these pages are already listed at
+"higher level" (like the list of articles) documents as well:
+
+<ul><li>viewarticle.php?id=</li></ul>
+
+<br/>If you are not sure what to write here, just leave this field empty.
+<i>Please note that these pages are still included into sitemap.</i>
+
+<li>"Exclude extensions" - these files are not crawled and not included in sitemap.
+
+<li>To disallow the part of your website from inclusion to the sitemap use
+"Exclude URLs" setting: all URLs that contain the strings specified will be skipped. 
+<br>For instance, to exclude all pages within "www.domain.com/folder/" add this line:
+<ul><li>folder/</li></ul>
+<br>If your site has pages with lists that can be reordered by columns and URLs look like
+"list.php?sort=column2", add this line to exclude duplicate content:
+<ul><li>sort=</li></ul>
+
+<br>Anyway, you may leave this box empty to get ALL pages listed.
+
+<li>"Include ONLY URLs" setting is the opposite to "Exclude URLs". When 
+it is not empty, ONLY the urls that match the substring entered are included into sitemap.
+
+<li>"Individual attributes" setting allows you to set 
+specific values for last modification time, frequency andpriority per page. 
+To use it, define specific frequency and priority attributes in the following format:
+"url substring,lastupdate YYYY-mm-dd,frequency,priority". 
+<br>Example:
+<br>
+page.php?product=,2005-11-14,monthly,0.9
+
+<li>You may want to limit the number of pages to index to make sure it will not be 
+endless if your website have an error like unlimited looped links.
+
+<li>To limit the maximum running time of the script, define the "Maximum execution time" field 
+(in seconds).
+
+<li>To have a possibility to use "Resume session" feature, define the "Save the script state" field.
+This value means the intervals to save the crawler process state, so in case the script was interrupted,
+you can continue the process from the last saved point. Set this value to "0" to disable savings.
+
+<li>To reduce the load on your server made by the sitemap generator, you can add the "sleep" delay
+after each N (configured) requests to your site for X seconds (configured). Leave blank ("0") values
+to crawls the site without delays.
+
+<li>Google doesn't support sitemap files with more than 50,000 pages.
+That's why script supports <b>"Sitemap Index"</b> creation for the big sites. So, it will
+create one sitemap index file and multiple sitemap files with 50 thousand pages each.
+<br>For instance, your website has about 140,000 pages. The XML sitemap generator will
+create these files:
+
+<ul>
+<li>"sitemap.xml" - sitemap index file that includes links to other files (filename depends on what you entered in the "Save sitemap to" field)
+<li>"sitemap1.xml" - sitemap file (URLs from 1 to 50,000)
+<li>"sitemap2.xml" - sitemap file (URLs from 50,001 to 100,000)
+<li>"sitemap3.xml" - sitemap file (URLs from 100,001 to 140,000)
+</ul>
+Please make sure <b>all</b> of these files are writable if your website is large.
+
+<li>Enable "<b>Create HTML Sitemap</b>" option to let generator create a sitemap for your visitors. 
+You should also define the "HTML Sitemap filename" where the sitemap will be stored. It is possible 
+to split html sitemap onto multiple files by defining the "Number of links per page in HTML sitemap" 
+option.
+<br/>
+The filenames are like the following:
+<ul>
+<li>"sitemap.html" - in case when all links fit in one file
+<br/>OR
+<li>"sitemap1.html" - site map file, page 1
+<li>"sitemap2.html" - site map file, page 2
+<li>etc
+</ul>
+
+<br/>
+Same as point above: please make sure <b>all</b> of these files are writable.
+<br/>
+<br/>
+The site map pages layout can be modified to suit to your website in <b>pages/mods/sitemap_tpl.html</b> file.
+<br/>
+Besides modifying the stylesheet for html sitemap, you can change the way it is formatted. The basic template commands are:
+<ul>
+<li>&lt;TLOOP XX&gt;...&lt;/TLOOP&gt; - defines a repeating sequence of code (like page numbers or sitemap links)</li>
+<li>&lt;TIF XX&gt;...&lt;/TIF&gt; - defines a conditional statement that is inserted only when a specific term is met</li>
+<li>&lt;TVAR XX&gt; - inserts a value of a specified variable</li>
+</ul>
+Please refer to sitemap_tpl.html file for usage example.
+
+
+
+
+<li>Enable GZip compression of sitemap files to save on disk space and bandwidth. In this
+case ".gz" will be added to sitemap filenames (like "sitemap.xml.gz").
+
+<li>"Sitemap URL" is the same file entered in "Save sitemap to" field, but in the URL form. 
+It is required to inform Google about sitemap address.
+
+<li>Set "Ping Google" checkbox enabled to let the script inform Google on every sitemap
+change. In this way you will always let google know about the fresh information on your site.
+
+<li>If you want to restrict access to your generator pages, set the login and password here.
+
+</ol>
+
+<a name="usage"></a>
+<h2>4. Usage</h2>
+<ol>
+<li>The first step is the script <b class="aemphasis">"Configuration"</b>. 
+The script will show you the alert messages if the problem is found (e.g., config file
+is not writable).<br>
+Do not forget to save the settings for your website after making the changes.
+<li>Try to crawl your site using <b class="aemphasis">"Crawling"</b> page. Just
+press "Run" button and you will see the generation progress information, including:
+<ul>
+<li>Links depth
+<li>Current page
+<li>Pages scanned
+<li>Pages left
+<li>Time passed
+<li>Time left (estimated)
+</ul>
+Please <b>be patient</b> and wait for the crawling completion, for the large sites it may 
+take significant time. Upon the completion the script will automatically redirect you to the 
+"View Sitemap" page.
+
+<li>For the large websites you may want to use <i>"Run in background"</i> option. In this case
+the crawler will keep working even after you will click on the other page or even closed
+your browser.
+
+<li>When your previous session was interrupted by you or the script has been suspended by a
+system, you can <i>resume the process</i> from the last saved state. The time intervals for state
+saving is defined on the "Configuration" screen.
+
+<li>Later on you may want to setup a cron job to refresh your sitemap (described above in 
+the "Installation" section).
+
+<li>When the generator script is running (either with cron or using "Run in background" 
+feature), you will see it's progress state on "Crawling" page. There you will also find 
+the link to <b>stop</b> the script, which is very useful for big sites because you don't 
+have to wait 
+until it is finished if you want to modify the configuration and re-run the script.
+
+<li>On the <b class="aemphasis">"View Sitemap"</b> page the content of the recently generated sitemap is displayed.
+For the large sites multiple parts are shown, including sitemap index and every sitemap
+file separately. 
+
+<li>
+When the sitemap is already generated, <b class="aemphasis">"Sitemap details"</b> block appears in the left column of the pages.
+It contains a link to download xml sitemap and also a sitemap <b>in text format</b> (one URL per line).
+Some other details are also available:
+<ul>
+<li>Request date
+<li>Processing time (sec)
+<li>Pages indexed
+<li>Sitemap files
+<li>Pages size (Mb)
+</ul>
+
+<li><b class="aemphasis">"Analyze"</b> feature allows you to easily investigate
+the site structure. It represents the tree-like list of directories of your website,
+indicating the number of pages in every folder. You can expand/collapse the tree parts
+by clicking the [x] signs.
+
+<li>Sometimes it is very helpful to know the dynamics of the sites contents. The 
+<b class="aemphasis">"ChangeLog"</b> page shows the list of all crawling sessions,
+including:
+<ul>
+<li>Date/Time
+<li>Total pages
+<li>Proc.time, sec
+<li>Bandwidth, Mb
+<li>Number of New URLs
+<li>Number of Removed URLs
+<li>Number of Broken links
+</ul>
+
+You can click any of the sessions titles to see detailed page with the full list of
+<b>"Added URLs"</b> and <b>"Removed URLs"</b>. As you may see, on this page you will
+easily track how website changes in time, which is especially useful for large dynamic,
+database-driven sites.
+
+<li>One more feature that is naturally supported by website crawler is 
+<b class="aemphasis">"Broken Links"</b> list page. You will
+see all the pages URLs that were failed to load by the script (HTTP code 404 was returned)
+AND also corresponding list of pages that <b>refer to the broken pages</b>.
+Having this page on the screen you can easily fix this problem on your website.
+
+<li>Concluding, if you will setup the cron job to run the Google sitemap creator script
+and enable "Inform Google" feature, everything will work automatically without a
+user interaction required. 
+<br>And you still can refer to interesting details at Analyze, ChangeLog, Broken Links
+and View Sitemap pages at any time.
+
+</ol>
+</div>
+
+<!-- PHP XML generator documentation ends here -->
+
+<br style="clear:both;"/>
+</div>
+<div id="copyright">
+Copyright (c)2005-2012 <a href="http://www.xml-sitemaps.com">XML Sitemaps</a>
+<br style="clear:both;"/>
+</div>
+
+</body>
+</html>

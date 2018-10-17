@@ -1,0 +1,38 @@
+.rball{
+    width:300px;
+    height:300px;
+    margin:0 auto;
+    border:3px solid #3ebb2b;
+    position: relative;
+}
+.rball>.ball{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:red;
+    position:absolute;
+    animation:rball-run 5s linear infinite;
+}
+
+@keyframes rball-run {
+    0%{
+        top:0;
+        left:0;
+    }
+    25%{
+        top:270px;
+        left:0;
+    }
+    50%{
+        top:270px;
+        left:270px;
+    }
+    75%{
+        top:0;
+        left:270px;
+    }
+    100%{
+        top:0;
+        left:0;
+    }
+}

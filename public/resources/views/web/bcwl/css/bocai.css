@@ -1,0 +1,127 @@
+/*样式重置*/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}body,button,input,select,textarea{font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}ol,ul{list-style:none}a{text-decoration:none}a:hover{text-decoration:underline}sup{vertical-align:text-top}sub{vertical-align:text-bottom}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}
+
+
+/*公共样式*/
+.row{width:1238px;margin:0 auto;}
+
+/*头部*/
+.bocai-header{width:1238px;height:126px;background: #ffffff;position:relative;}
+.bocai-header>div{position: absolute;top:15px;left:585px;}
+.bocai-header>div>ul{display:inline-block;}
+.bocai-header>div>ul li{float:left;margin-right: 20px;box-sizing: border-box;}
+.bocai-header>div>ul li a{font-size: 14px;color:#88888b;}
+.bocai-header>div>ul li a:hover{color:orange;text-decoration: none;}
+.bocai-header>div>ul li:last-child{font-size: 14px;color:#88888b;}
+.bocai-header>div>ul li:last-child>span{font-size: 16px;color:#ff6600;padding-left:5px;font-weight: bold;}
+.bocai-header>h2{margin-left: 139px;}
+.bocai-header>nav{height: 46px;margin-top:-20px;}
+.bocai-header>nav>ul{margin-left: 485px;}
+.bocai-header>nav>ul li{float:left;text-align: center;line-height: 46px;}
+.bocai-header>nav>ul li a{color:#111111;font-size: 16px;}
+.bocai-header>nav>ul li a::after{content:"";display: inline-block;width:2px;height:12px;line-height:46px;background:#9f9999;margin:0 12px;}
+.bocai-header>nav>ul li a:hover{text-decoration: none;color: orange;}
+
+
+/*lunbo轮播图*/
+.bocai-lunbo{width:1238px;height:322px;overflow: hidden;}
+.bocai-lunbo>ul{}
+.bocai-lunbo>ul li{}
+.bocai-lunbo>ul li a{}
+.bocai-lunbo>ul li a img{width:100%;}
+
+
+
+/*服务*/
+.bocai-fuwu{height:519px;background: #f8f8f8;text-align: center;}
+.bocai-fuwu>h1{color:#666;font-size: 37px;padding-top: 47px;box-sizing: border-box;}
+.bocai-fuwu>h3{color:#888888;font-size: 14px;padding-bottom: 31px;box-sizing: border-box;}
+.bocai-fuwu>div{width:958px;margin:0 auto;}
+.bocai-fuwu>div>ul{}
+.bocai-fuwu>div>ul>li{float: left;width:232px;margin-right:10px;box-sizing: border-box;}
+.bocai-fuwu>div>ul>li:last-child{margin-right:0;}
+.bocai-fuwu>div>ul>li img{}
+.bocai-fuwu>div>ul>li h2{color:#666;margin:21px 0 25px 0;font-size: 19px;box-sizing: border-box;}
+.bocai-fuwu>div>ul>li p{color:#b4adad;font-size: 11px;padding:0 5px;box-sizing:border-box;text-align: center;}
+.bocai-fuwu>div>ul>li>ul{margin-bottom: 29px;margin-top: 10px;}
+.bocai-fuwu>div>ul>li>ul li{float: left;border: 1px solid #e5e5e5;width:102px;height: 22px;line-height:22px;margin:5px 6px;transition:all .3s;box-sizing: border-box;}
+.bocai-fuwu>div>ul>li>ul li a{color:#a37b77;font-size: 12px;}
+.bocai-fuwu>div>ul>li>ul li:hover{border-color: #1a1a1a;}
+.bocai-fuwu>div>ul>li>ul li:hover a{text-decoration: none;}
+
+
+/*我们做了什么*/
+.bocai-wedoing{background:#ffffff;text-align: center;}
+.bocai-wedoing>h1{color:#666666;font-size: 36px;margin-top: 39px;}
+.bocai-wedoing>p{color:#8f8888;font-size: 11px;width:756px;margin: 19px auto 37px auto;}
+.bocai-wedoing>ul{width:993px;margin:0 auto;}
+.bocai-wedoing>ul li{float:left;background:#eaeaea;width:236px;height:50px;border-radius: 2%;margin:32px 6px;transition:all 1s;}
+.bocai-wedoing>ul li a{color:#666666;font-size: 21px;line-height: 50px;}
+.bocai-wedoing>ul li:hover{background: #f14702;}
+.bocai-wedoing>ul li:first-child{background: #f14702;}
+.bocai-wedoing>ul li:first-child a{color: #ffffff;}
+.bocai-wedoing>ul li:hover a{color:#fff;text-decoration: none;}
+.bocai-wedoing>div{width:993px;margin:0 auto;overflow: hidden;}
+.bocai-wedoing>div .pink{width:311px;box-sizing:border-box;float:left;margin:10px;}
+.bocai-wedoing>div .pink .box{margin-bottom: 20px;border: 1px solid #cfcfcf;box-shadow: 2px 1px 1px 3px rgba(207,207,207,.6);}
+.bocai-wedoing>div .pink .box>h1{margin: 20px 0 10px 20px;text-align: left;font-size: 17px;color:#444444;}
+.bocai-wedoing>div .pink .box>img{width:270px;}
+.bocai-wedoing>div .pink .box>p{padding:20px 0 20px 20px;line-height:20px;font-size: 12px;text-align: left;box-sizing: border-box;border-bottom: 1px solid #e6e6e6;}
+.bocai-wedoing>div .pink .box>h2{font-size: 11px;color:#908989;height:43px;position:relative;line-height: 43px;text-align: left;padding-left: 20px;}
+.bocai-wedoing>div .pink .box>h2>span:hover{color:orange;}
+.bocai-wedoing>div .pink .box>p:hover{color:orange;}
+.bocai-wedoing>div .pink .box>h2>a{width:16px;height:14px;overflow:hidden;position: absolute;top:15px;right:20px;}
+.bocai-wedoing>div .pink .box>h2>a img{transition:all 600ms;}
+.bocai-wedoing>div .pink .box>h2>a:hover img{transform: translateY(-14px);}
+.bocai-wedoing>a{display:block;margin:0 auto 101px auto;width:220px;height:56px;line-height:56px;text-align:center;box-sizing:border-box;font-size:23px;color:#969696;border:3px solid #e3e3e3;border-radius:19px;text-decoration: none;transition:all 500ms;}
+.bocai-wedoing>a:hover{color:orange;border-color: orange;}
+
+
+/*服务客户*/
+.bocai-kehu{background:#e8e8e8;text-align: center;}
+.bocai-kehu>h1{color:#666666;font-size: 37px;padding-top:45px;padding-bottom: 16px;}
+.bocai-kehu>p{color:#8f8888;font-size: 11px;padding-bottom: 32px;}
+.bocai-kehu>img{display:block;margin:0 auto;}
+.bocai-kehu>a:nth-of-type(1){display:inline-block;width:170px;height:40px;background:#505050;border-radius: 14px;color:#fff;font-size: 16px;line-height: 40px;margin-top: 45px;margin-bottom: 72px;text-decoration:none;margin-right: 28px; }
+.bocai-kehu>a:nth-of-type(1):hover{background: #f14702;}
+.bocai-kehu>a:nth-of-type(2){display:inline-block;width:170px;height:40px;background:#f14702;border-radius: 14px;color:#fff;font-size: 16px;line-height: 40px;margin-top: 45px;margin-bottom: 72px;text-decoration: none;}
+
+.bocai-kehu>a:nth-of-type(1)::after{content:"＞";padding-left: 25px;box-sizing: border-box;}
+.bocai-kehu>a:nth-of-type(2)::after{content:"＞";padding-left: 10px;box-sizing: border-box;}
+
+
+/*最新签约客户*/
+.bocai-qianyue{height:406px;width:963px;margin:0 auto;overflow: hidden;}
+.bocai-qianyue>p{font-size: 16px;color:#888888;padding: 29px 0 15px 0;}
+.bocai-qianyue>p a{float:right;color:#888888;font-size: 11px;}
+.bocai-qianyue>div{}
+.bocai-qianyue>div>div{float:left;width:306px;height:152px;margin:0 7px;}
+.bocai-qianyue>div>div>ul{}
+.bocai-qianyue>div>div>ul>li{border:1px solid #666666;margin-bottom: 10px;border-radius:5px;overflow: hidden;box-shadow: 2px 1px 2px rgba(223,223,223,.8);transition:all .5s;}
+.bocai-qianyue>div>div>ul>li:hover{transform:translateY(-5px);}
+.bocai-qianyue>div>div>ul>li>a{width:155px;height:120px;display:block;float:left;padding:5px;}
+.bocai-qianyue>div>div>ul>li>a img{width:155px;margin-right: 5px;}
+.bocai-qianyue>div>div>ul>li>div{float:left;width:134px;height:120px;}
+.bocai-qianyue>div>div>ul>li>div time{display:block;color:#a1a1a1;font-size: 10px;padding-top: 18px;}
+.bocai-qianyue>div>div>ul>li>div a{text-decoration: none;}
+.bocai-qianyue>div>div>ul>li>div a:nth-of-type(1){display:block;color:#66666f;font-size: 14px;line-height: 20px;padding-top: 13px;}
+.bocai-qianyue>div>div>ul>li>div a:nth-of-type(2){display:block;color:#9f9d9f;font-size: 9px;padding-top: 20px;padding-left: 35px;transition:all .2s;}
+.bocai-qianyue>div>div>ul>li>div a:nth-of-type(2):hover{color:#ab283f;}
+.bocai-qianyue>div>div>ul>li>div a:nth-of-type(2)::after{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#ab283f;margin-left: 5px;}
+
+
+
+/*footer部分*/
+.bocai-footer{width:963px;}
+.bocai-footer>div:first-child{height:36px;border-top:1px solid #e0e0e0;}
+.bocai-footer>div:first-child a{display:inline-block;height:36px;line-height: 36px;color:#666666;margin-right: 10px;transition:all .3s;}
+.bocai-footer>div:first-child a:first-child{margin-right: 19px;}
+.bocai-footer>div:first-child a:hover{color:orange;text-decoration: none;}
+.bocai-footer>div:last-child{height:123px;border-top:1px solid #e0e0e0;}
+.bocai-footer>div:last-child p:first-child{padding-top: 22px;}
+.bocai-footer>div:last-child p:first-child a{display: inline-block;margin:0 10px;color:#666666;}
+.bocai-footer>div:last-child p:first-child a:hover{color:orange;text-decoration: none;}
+.bocai-footer>div:last-child p:last-child{height:27px;padding-top: 52px;text-align: center;background:url("../images/gs.jpg") no-repeat 305px 46px;}
+
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<rss version="2.0" 
+xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>My Services</title>
+<link>%INIT_URL%</link>
+<description>My Services at %INIT_URL%</description>%URLS_LIST_FROM%
+<item>
+<title><TVAR TITLE></title> 
+<link><TVAR URL></link> 
+<description><TVAR DESC></description>
+</item>%URLS_LIST_TO%
+</channel>
+</rss>

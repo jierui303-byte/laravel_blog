@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="%GEN_URL%pages/mods/sitemap.xsl"?>
+<sitemapindex
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+            http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+%SITEMAPS_LIST_FROM%
+<sitemap>
+	<loc><TVAR URL></loc>
+	<lastmod><TVAR LASTMOD></lastmod>
+</sitemap>%SITEMAPS_LIST_TO%
+</sitemapindex>

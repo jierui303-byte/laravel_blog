@@ -1,0 +1,46 @@
+.picq{
+    width:1440px;
+    height:600px;
+    background:url("../picq/bg.jpg") no-repeat -100px -150px;
+}
+.picq .wrap{
+    width:1300px;
+    height:600px;
+    margin:0 auto;
+    padding-top: 170px;
+    box-sizing: border-box;
+}
+.picq .wrap>div{
+    width:241px;
+    height:340px;
+    background: #fff;
+    padding:20px;
+    box-sizing: border-box;
+    float: left;
+    margin:20px;
+}
+.picq .wrap>div>img{
+    width:200px;
+    height:230px;
+}
+.picq .wrap>div>p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.picq .wrap>div:nth-child(1){
+    transform-origin: left bottom;
+    transform:rotate(-10deg);
+}
+.picq .wrap>div:nth-child(2){
+    transform-origin: right top;
+    transform:rotate(10deg);
+}
+.picq .wrap>div:nth-child(3){
+    transform-origin: left top;
+    transform:rotate(-30deg);
+}
+.picq .wrap>div:nth-child(4){
+    transform-origin: right bottom;
+    transform:rotate(40deg);
+}
