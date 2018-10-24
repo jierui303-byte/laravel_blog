@@ -63,16 +63,16 @@ class Kernel extends ConsoleKernel
 //        $schedule->command('emails:send --force')->daily();
 
         //每天凌晨开始 查询一下词库关键词的排名并更新关键词的排名情况
-//        $schedule->command('checkKeywordPaiMing:putcache')->everyMinute();
+        $schedule->command('checkKeywordPaiMing:putcache')->everyMinute();
 
         //每天凌晨开始 查询一下未收录文章的收录状况并记录文章收录时间
-        // $schedule->command('getArticleSouLu:putcache')->daily();
+        $schedule->command('getArticleSouLu:putcache')->daily();
 
         //定时获取最新的采集规则，采集到对应的内容URL地址入库   把采集URL规则和内容采集区分开执行
-        // $schedule->command('getCollectRulesUrlList:putcache')->everyFiveMinutes();
+        $schedule->command('getCollectRulesUrlList:putcache')->everyFiveMinutes();
 
         //定时去采集文章URL地址中提取没有采集过的URL地址进行内容采集
-        // $schedule->command('getArticlesByCollectRules:putcache')->everyFiveMinutes();
+        $schedule->command('getArticlesByCollectRules:putcache')->everyFiveMinutes();
 
         //每天把要引流网站进行一次外链工具发布
 
