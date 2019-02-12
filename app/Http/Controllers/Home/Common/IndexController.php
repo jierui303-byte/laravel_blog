@@ -59,9 +59,9 @@ class IndexController extends CommonController
         $this->domainBefore = $domainBefore;
         $this->domainCenter = $domainCenter;
         $this->domainAfter = $domainAfter;
-//        echo '域名前缀：'.$domainBefore.'<br/>';
-//        echo '域名：'.$domainCenter.'<br/>';
-//        echo '域名后缀：'.$domainAfter.'<br/>';
+        echo '域名前缀：'.$domainBefore.'<br/>';
+        echo '域名：'.$domainCenter.'<br/>';
+        echo '域名后缀：'.$domainAfter.'<br/>';
 
         //根据分类缩写查找对应的模板标示
         $cateInfo = (new Category())->where('cate_math', $this->domainBefore)->first();
